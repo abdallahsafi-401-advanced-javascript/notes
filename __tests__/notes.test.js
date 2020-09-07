@@ -15,6 +15,12 @@ describe('Notes Module', () => {
     expect(console.log).not.toHaveBeenCalled();
   });
 
+  it('add() does nothing with invalid options', () => {
+    const notes = new Notes();
+    notes.add(undefined);
+    expect(console.log).not.toHaveBeenCalled();
+  });
+
   it('add() logs out when given options', () => {
     const notes = new Notes();
     notes.add('note');
