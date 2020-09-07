@@ -9,15 +9,16 @@ jest.spyOn(global.console, 'log');
 // describe the module I am testing
 describe('Notes Module', () => {
   // test case
+
   it('add() does nothing with invalid options', () => {
     const notes = new Notes();
-    notes.add();
+    notes.add(undefined);
     expect(console.log).not.toHaveBeenCalled();
   });
 
   it('add() does nothing with invalid options', () => {
     const notes = new Notes();
-    notes.add(undefined);
+    notes.add();
     expect(console.log).not.toHaveBeenCalled();
   });
 
@@ -29,7 +30,7 @@ describe('Notes Module', () => {
 
   it('execute() logs out when given options', () => {
     const notes = new Notes();
-    notes.execute({action:undefined});
+    notes.execute({ action: undefined });
     expect(console.log).toHaveBeenCalled();
   });
 });
