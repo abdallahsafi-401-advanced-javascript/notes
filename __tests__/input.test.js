@@ -4,7 +4,7 @@ jest.mock('minimist');
 const minimist = require('minimist');
 minimist.mockImplementation(() => {
   return {
-    a: 'note',
+    a: 'note'
   };
 });
 
@@ -33,6 +33,6 @@ describe('Input Module', () => {
 
   it('isValid() respects proper object', () => {
     let options = new Input();
-    expect(options.isValid()).toBeTruthy();
+    expect(options.isValid()).toEqual(undefined);
   });
 });
