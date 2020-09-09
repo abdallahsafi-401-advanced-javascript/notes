@@ -33,12 +33,19 @@ These instructions will get you a copy of the project up and running on your loc
  `node index.js --add or -a 'note content'`
 
 ## Architecture
+
 This application was build with Node.js and it includes:
 - minimist package
+- dotenv package
+- jest package 
+- supergoose package
 
+# UML diagram
+
+![uml-diagram](./assets/notes-uml.jpg)
 
 ## Change Log
-06-09-2020 5:30pm - you can add a note.
+10-09-2020 5:30pm - you can add, list and delete notes.
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->

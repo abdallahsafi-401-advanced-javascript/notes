@@ -62,5 +62,31 @@ describe('Notes Module', () => {
     });
   });
 
+  //test for errors
+  it('add() should throw error if passed invalid arguments', () => {
+    try {
+      const notes = new Notes();
+      notes.add();
+    } catch (error) {
+      expect(error).toEqual(new Error('somthing went wrong'));
+    }
+  });
 
+  it('list() should throw error if passed invalid arguments', () => {
+    try {
+      const notes = new Notes();
+      notes.list({invalid: 'invalid'});
+    } catch (error) {
+      expect(error).toEqual(new Error('somthing went wrong'));
+    }
+  });
+
+  it('add() should throw error if passed invalid arguments', () => {
+    try {
+      const notes = new Notes();
+      notes.delete();
+    } catch (error) {
+      expect(error).toEqual(new Error('somthing went wrong'));
+    }
+  });
 });
