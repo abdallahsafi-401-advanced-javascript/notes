@@ -4,7 +4,7 @@ jest.mock('minimist');
 const minimist = require('minimist');
 minimist.mockImplementation(() => {
   return {
-    a: 'note'
+    a: 'note',
   };
 });
 
